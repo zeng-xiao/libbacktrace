@@ -3,3 +3,6 @@
 *.lo
 *.a
 *.la
+
+build
+install
