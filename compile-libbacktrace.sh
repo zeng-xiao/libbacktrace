@@ -17,7 +17,8 @@ make -j1 2>&1 | tee make-j1.log
 make install
 
 # test
-make test_elf_64
-../test-driver --test-name `pwd`/x.log --log-file `pwd`/y.log --trs-file `pwd`/z.log `pwd`/test_elf_64
+make test_elf_64.log -j1 2>&1 | tee make-test_elf_64.log.log
+# make test_elf_64 -j1 2>&1 | tee make-test_elf_64.log
+# ../test-driver --test-name `pwd`/x.log --log-file `pwd`/y.log --trs-file `pwd`/z.log `pwd`/test_elf_64
 
 echo $?
